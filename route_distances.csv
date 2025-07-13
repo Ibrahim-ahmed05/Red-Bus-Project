@@ -1,142 +1,461 @@
 route_name,from_stop,to_stop,distance_km
+Route 1,Khokrapar,Saudabd,0.78
+Route 1,Saudabd,Khokrapar,0.78
+Route 1,Saudabd,RCD Ground,1.68
+Route 1,RCD Ground,Saudabd,1.68
 Route 1,RCD Ground,Kalaboard,1.39
+Route 1,Kalaboard,RCD Ground,1.39
 Route 1,Kalaboard,Malir Halt,1.55
+Route 1,Malir Halt,Kalaboard,1.55
 Route 1,Malir Halt,Colony Gate,2.47
+Route 1,Colony Gate,Malir Halt,2.47
 Route 1,Colony Gate,Nata Khan Bridge,1.42
+Route 1,Nata Khan Bridge,Colony Gate,1.42
 Route 1,Nata Khan Bridge,Drigh Road Station,1.14
+Route 1,Drigh Road Station,Nata Khan Bridge,1.14
 Route 1,Drigh Road Station,PAF Base Faisal,13.43
+Route 1,PAF Base Faisal,Drigh Road Station,13.43
+Route 1,PAF Base Faisal,Laal Kothi,19.56
+Route 1,Laal Kothi,PAF Base Faisal,19.56
+Route 1,Laal Kothi,Karsaz,3.47
+Route 1,Karsaz,Laal Kothi,3.47
 Route 1,Karsaz,Nursery,4.9
+Route 1,Nursery,Karsaz,4.9
 Route 1,Nursery,FTC,9.64
+Route 1,FTC,Nursery,9.64
 Route 1,FTC,Regent Plaza,1.19
+Route 1,Regent Plaza,FTC,1.19
 Route 1,Regent Plaza,Metropole,1.12
+Route 1,Metropole,Regent Plaza,1.12
+Route 1,Metropole,Fawwara Chowk,0.0
+Route 1,Fawwara Chowk,Metropole,0.0
+Route 1,Fawwara Chowk,Arts Council,1.03
+Route 1,Arts Council,Fawwara Chowk,1.03
 Route 1,Arts Council,Shaheen Complex,0.2
+Route 1,Shaheen Complex,Arts Council,0.2
 Route 1,Shaheen Complex,I.I.Chundrigar,0.92
+Route 1,I.I.Chundrigar,Shaheen Complex,0.92
 Route 1,I.I.Chundrigar,Tower,1.4
+Route 1,Tower,I.I.Chundrigar,1.4
 Route 1,Tower,Fisheries,21.28
+Route 1,Fisheries,Tower,21.28
 Route 1,Fisheries,Dockyard,23.43
+Route 1,Dockyard,Fisheries,23.43
+Route 2,Power House,UP Mor,2.83
+Route 2,UP Mor,Power House,2.83
+Route 2,UP Mor,Nagan Chowrangi,0.86
+Route 2,Nagan Chowrangi,UP Mor,0.86
+Route 2,Nagan Chowrangi,Shafiq Morr,1.28
+Route 2,Shafiq Morr,Nagan Chowrangi,1.28
+Route 2,Shafiq Morr,Sohrab Goth,1.56
+Route 2,Sohrab Goth,Shafiq Morr,1.56
 Route 2,Sohrab Goth,Gulshan Chowrangi,2.89
+Route 2,Gulshan Chowrangi,Sohrab Goth,2.89
 Route 2,Gulshan Chowrangi,NIPA,0.96
+Route 2,NIPA,Gulshan Chowrangi,0.96
+Route 2,NIPA,Johar Morr,2.23
+Route 2,Johar Morr,NIPA,2.23
+Route 2,Johar Morr,COD,1.43
+Route 2,COD,Johar Morr,1.43
 Route 2,COD,Drigh Road Station,2.82
+Route 2,Drigh Road Station,COD,2.82
 Route 2,Drigh Road Station,Colony Gate,2.45
+Route 2,Colony Gate,Drigh Road Station,2.45
 Route 2,Colony Gate,Shah Faisal Colony,0.83
+Route 2,Shah Faisal Colony,Colony Gate,0.83
 Route 2,Shah Faisal Colony,Singer Chowrangi,4.96
+Route 2,Singer Chowrangi,Shah Faisal Colony,4.96
+Route 2,Singer Chowrangi,Khaddi Stop,7.21
+Route 2,Khaddi Stop,Singer Chowrangi,7.21
+Route 2,Khaddi Stop,Indus Hospital,14.73
+Route 2,Indus Hospital,Khaddi Stop,14.73
+Route 3,Power House,UP More,2.83
+Route 3,UP More,Power House,2.83
+Route 3,UP More,Nagan Chowrangi,0.86
+Route 3,Nagan Chowrangi,UP More,0.86
 Route 3,Nagan Chowrangi,Sakhi Hasan,1.43
+Route 3,Sakhi Hasan,Nagan Chowrangi,1.43
 Route 3,Sakhi Hasan,5 Star Chowrangi,1.92
+Route 3,5 Star Chowrangi,Sakhi Hasan,1.92
 Route 3,5 Star Chowrangi,KDA Chowrangi,1.62
+Route 3,KDA Chowrangi,5 Star Chowrangi,1.62
 Route 3,KDA Chowrangi,Board Office,2.22
+Route 3,Board Office,KDA Chowrangi,2.22
 Route 3,Board Office,Nazimabad Eid Gah Ground,1.59
+Route 3,Nazimabad Eid Gah Ground,Board Office,1.59
+Route 3,Nazimabad Eid Gah Ground,Liaquatabad 10 Number,1.99
+Route 3,Liaquatabad 10 Number,Nazimabad Eid Gah Ground,1.99
+Route 3,Liaquatabad 10 Number,Essa Nagri,2.36
+Route 3,Essa Nagri,Liaquatabad 10 Number,2.36
+Route 3,Essa Nagri,Civic Centre,1.57
+Route 3,Civic Centre,Essa Nagri,1.57
+Route 3,Civic Centre,National stadium,1.02
+Route 3,National stadium,Civic Centre,1.02
 Route 3,National stadium,Karsaz,2.61
+Route 3,Karsaz,National stadium,2.61
 Route 3,Karsaz,Nursery,4.9
+Route 3,Nursery,Karsaz,4.9
 Route 3,Nursery,FTC,9.64
+Route 3,FTC,Nursery,9.64
 Route 3,FTC,Korangi Road,4.05
+Route 3,Korangi Road,FTC,4.05
+Route 3,Korangi Road,Nasir Jump,4.91
+Route 3,Nasir Jump,Korangi Road,4.91
+Route 4,Power House,UP Mor,2.83
+Route 4,UP Mor,Power House,2.83
+Route 4,UP Mor,Nagan Chowrangi,0.86
+Route 4,Nagan Chowrangi,UP Mor,0.86
+Route 4,Nagan Chowrangi,Shafiq Mor,1.28
+Route 4,Shafiq Mor,Nagan Chowrangi,1.28
+Route 4,Shafiq Mor,Sohrab Goth,1.56
+Route 4,Sohrab Goth,Shafiq Mor,1.56
 Route 4,Sohrab Goth,Water Pump,11.49
+Route 4,Water Pump,Sohrab Goth,11.49
 Route 4,Water Pump,Ayesha Manzil,11.89
+Route 4,Ayesha Manzil,Water Pump,11.89
 Route 4,Ayesha Manzil,Karimabad,1.18
+Route 4,Karimabad,Ayesha Manzil,1.18
+Route 4,Karimabad,Liaqautabad 10,1.3
+Route 4,Liaqautabad 10,Karimabad,1.3
+Route 4,Liaqautabad 10,Laloo Khait,1.15
+Route 4,Laloo Khait,Liaqautabad 10,1.15
+Route 4,Laloo Khait,Teen Hati,5.5
+Route 4,Teen Hati,Laloo Khait,5.5
+Route 4,Teen Hati,Jehangir Road,1.4
+Route 4,Jehangir Road,Teen Hati,1.4
 Route 4,Jehangir Road,Numaish,1.33
+Route 4,Numaish,Jehangir Road,1.33
 Route 4,Numaish,Mobile Market,1.31
+Route 4,Mobile Market,Numaish,1.31
 Route 4,Mobile Market,Urdu Bazar,9.6
+Route 4,Urdu Bazar,Mobile Market,9.6
 Route 4,Urdu Bazar,Civil Hospital,10.99
+Route 4,Civil Hospital,Urdu Bazar,10.99
 Route 4,Civil Hospital,City Court,0.6
+Route 4,City Court,Civil Hospital,0.6
 Route 4,City Court,Light House,7.45
+Route 4,Light House,City Court,7.45
 Route 4,Light House,Bolton Market,6.71
+Route 4,Bolton Market,Light House,6.71
 Route 4,Bolton Market,Tower,0.41
+Route 4,Tower,Bolton Market,0.41
 Route 4,Tower,Keamari,3.25
+Route 4,Keamari,Tower,3.25
 Route 8,Yousuf Goth,Naval Colony,34.0
+Route 8,Naval Colony,Yousuf Goth,34.0
 Route 8,Naval Colony,Baldia,3.87
+Route 8,Baldia,Naval Colony,3.87
 Route 8,Baldia,Sher Shah,4.63
+Route 8,Sher Shah,Baldia,4.63
 Route 8,Sher Shah,Gulbai,1.96
+Route 8,Gulbai,Sher Shah,1.96
 Route 8,Gulbai,Agra Taj Colony,1.35
+Route 8,Agra Taj Colony,Gulbai,1.35
 Route 8,Agra Taj Colony,Daryabad,1.39
+Route 8,Daryabad,Agra Taj Colony,1.39
+Route 8,Daryabad,Jinnah Brige,1.84
+Route 8,Jinnah Brige,Daryabad,1.84
+Route 8,Jinnah Brige,Tower,0.49
+Route 8,Tower,Jinnah Brige,0.49
+Route 9,Gulsahan e Hadeed,Salah Uddin Ayubi Road,27.39
+Route 9,Salah Uddin Ayubi Road,Gulsahan e Hadeed,27.39
+Route 9,Salah Uddin Ayubi Road,Allah Wali Chowrangi,26.47
+Route 9,Allah Wali Chowrangi,Salah Uddin Ayubi Road,26.47
 Route 9,Allah Wali Chowrangi,National Highway 5,3.01
+Route 9,National Highway 5,Allah Wali Chowrangi,3.01
+Route 9,National Highway 5,Steel Mill More,7.52
+Route 9,Steel Mill More,National Highway 5,7.52
+Route 9,Steel Mill More,Port Bin Qasim More,21.73
+Route 9,Port Bin Qasim More,Steel Mill More,21.73
+Route 9,Port Bin Qasim More,Razzakabad,16.96
+Route 9,Razzakabad,Port Bin Qasim More,16.96
 Route 9,Razzakabad,Abdullah Goth,1.07
+Route 9,Abdullah Goth,Razzakabad,1.07
 Route 9,Abdullah Goth,Chowkundi More,1.38
+Route 9,Chowkundi More,Abdullah Goth,1.38
 Route 9,Chowkundi More,Fast University,0.87
+Route 9,Fast University,Chowkundi More,0.87
+Route 9,Fast University,Bhains Colony More,0.65
+Route 9,Bhains Colony More,Fast University,0.65
+Route 9,Bhains Colony More,Manzil Pump,2.96
+Route 9,Manzil Pump,Bhains Colony More,2.96
 Route 9,Manzil Pump,Quaidabad,1.74
+Route 9,Quaidabad,Manzil Pump,1.74
+Route 9,Quaidabad,Murghi Khana,0.72
+Route 9,Murghi Khana,Quaidabad,0.72
+Route 9,Murghi Khana,Prince Aly Boys School,2.68
+Route 9,Prince Aly Boys School,Murghi Khana,2.68
+Route 9,Prince Aly Boys School,Nadra Center Malir,0.0
+Route 9,Nadra Center Malir,Prince Aly Boys School,0.0
+Route 9,Nadra Center Malir,Malir Session Court,0.0
+Route 9,Malir Session Court,Nadra Center Malir,0.0
+Route 9,Malir Session Court,Malir 15,0.86
+Route 9,Malir 15,Malir Session Court,0.86
 Route 9,Malir 15,Kalaboard,1.23
+Route 9,Kalaboard,Malir 15,1.23
 Route 9,Kalaboard,Malir Halt,1.55
+Route 9,Malir Halt,Kalaboard,1.55
 Route 9,Malir Halt,Colony Gate,2.47
+Route 9,Colony Gate,Malir Halt,2.47
 Route 9,Colony Gate,Nata Khan Bridge,1.42
+Route 9,Nata Khan Bridge,Colony Gate,1.42
 Route 9,Nata Khan Bridge,Drigh Road Station,1.14
+Route 9,Drigh Road Station,Nata Khan Bridge,1.14
 Route 9,Drigh Road Station,PAF Base Faisal,13.43
+Route 9,PAF Base Faisal,Drigh Road Station,13.43
+Route 9,PAF Base Faisal,Laal Kothi,19.56
+Route 9,Laal Kothi,PAF Base Faisal,19.56
+Route 9,Laal Kothi,Karsaz,3.47
+Route 9,Karsaz,Laal Kothi,3.47
 Route 9,Karsaz,Nursery,4.9
+Route 9,Nursery,Karsaz,4.9
 Route 9,Nursery,FTC,9.64
+Route 9,FTC,Nursery,9.64
 Route 9,FTC,Regent Plaza,1.19
+Route 9,Regent Plaza,FTC,1.19
 Route 9,Regent Plaza,Metropole,1.12
+Route 9,Metropole,Regent Plaza,1.12
+Route 9,Metropole,Fawwara Chowk,0.0
+Route 9,Fawwara Chowk,Metropole,0.0
+Route 9,Fawwara Chowk,Arts Council,1.03
+Route 9,Arts Council,Fawwara Chowk,1.03
 Route 9,Arts Council,Shaheen Complex,0.2
+Route 9,Shaheen Complex,Arts Council,0.2
 Route 9,Shaheen Complex,I.I.Chundrigar,0.92
+Route 9,I.I.Chundrigar,Shaheen Complex,0.92
 Route 9,I.I.Chundrigar,Tower,1.4
+Route 9,Tower,I.I.Chundrigar,1.4
 Route 10,Numaish Chowrangi,Mobile Market,1.55
+Route 10,Mobile Market,Numaish Chowrangi,1.55
 Route 10,Mobile Market,Metropole,1.51
+Route 10,Metropole,Mobile Market,1.51
 Route 10,Metropole,Frere Hall,0.44
+Route 10,Frere Hall,Metropole,0.44
 Route 10,Frere Hall,Teen Talwar,1.52
+Route 10,Teen Talwar,Frere Hall,1.52
+Route 10,Teen Talwar,Do TalwarAbdullah Shah Ghazi,0.0
+Route 10,Do TalwarAbdullah Shah Ghazi,Teen Talwar,0.0
+Route 10,Do TalwarAbdullah Shah Ghazi,Dolmen Mall,5.56
+Route 10,Dolmen Mall,Do TalwarAbdullah Shah Ghazi,5.56
+Route 10,Dolmen Mall,Clock Tower DHA,10.94
+Route 10,Clock Tower DHA,Dolmen Mall,10.94
+Route 10,Clock Tower DHA,26 Street,2.6
+Route 10,26 Street,Clock Tower DHA,2.6
 Route 10,26 Street,Masjid-e-Ayesha,18.09
+Route 10,Masjid-e-Ayesha,26 Street,18.09
 Route 10,Masjid-e-Ayesha,Rahat Park,13.95
+Route 10,Rahat Park,Masjid-e-Ayesha,13.95
+Route 10,Korangi Crossing,CBM University,1.1
+Route 10,CBM University,Korangi Crossing,1.1
+Route 10,CBM University,Parco,2.04
+Route 10,Parco,CBM University,2.04
 Route 10,Parco,Ibrahim Hyderi,0.73
+Route 10,Ibrahim Hyderi,Parco,0.73
+Route 11,Miran Nakka,Gulistan Colony,2.63
+Route 11,Gulistan Colony,Miran Nakka,2.63
 Route 11,Gulistan Colony,Bihar Colony,5.88
+Route 11,Bihar Colony,Gulistan Colony,5.88
 Route 11,Bihar Colony,Agra Taj,6.88
+Route 11,Agra Taj,Bihar Colony,6.88
 Route 11,Agra Taj,Daryabad,1.39
+Route 11,Daryabad,Agra Taj,1.39
+Route 11,Daryabad,Jinnah Brige,1.84
+Route 11,Jinnah Brige,Daryabad,1.84
+Route 11,Jinnah Brige,Bahria Complex,5.66
+Route 11,Bahria Complex,Jinnah Brige,5.66
 Route 11,Bahria Complex,M.T.Khan Road,3.63
+Route 11,M.T.Khan Road,Bahria Complex,3.63
+Route 11,M.T.Khan Road,PIDC,1.9
+Route 11,PIDC,M.T.Khan Road,1.9
+Route 11,PIDC,Submarine Chowk,1.65
+Route 11,Submarine Chowk,PIDC,1.65
+Route 11,Submarine Chowk,Bahria Complex 3,4.31
+Route 11,Bahria Complex 3,Submarine Chowk,4.31
 Route 11,Bahria Complex 3,Khadda Market,5.82
+Route 11,Khadda Market,Bahria Complex 3,5.82
 Route 11,Khadda Market,Abdullah Shah Ghazi,2.02
+Route 11,Abdullah Shah Ghazi,Khadda Market,2.02
+Route 11,Abdullah Shah Ghazi,Bilawal Chowrangi,0.0
+Route 11,Bilawal Chowrangi,Abdullah Shah Ghazi,0.0
+Route 11,Bilawal Chowrangi,Ziauddin Hospital,2.76
+Route 11,Ziauddin Hospital,Bilawal Chowrangi,2.76
 Route 11,Ziauddin Hospital,Shireen Jinnah Colony,0.78
+Route 11,Shireen Jinnah Colony,Ziauddin Hospital,0.78
+Route 12,Naddi Kinara,Khokhrapar,17.58
+Route 12,Khokhrapar,Naddi Kinara,17.58
 Route 12,Khokhrapar,Saudabad Chowrangi,1.13
+Route 12,Saudabad Chowrangi,Khokhrapar,1.13
 Route 12,Saudabad Chowrangi,RCD Ground,0.5
+Route 12,RCD Ground,Saudabad Chowrangi,0.5
 Route 12,RCD Ground,Kalaboard,1.39
+Route 12,Kalaboard,RCD Ground,1.39
 Route 12,Kalaboard,Malir 15,1.23
+Route 12,Malir 15,Kalaboard,1.23
 Route 12,Malir 15,Malir Mandir,0.65
+Route 12,Malir Mandir,Malir 15,0.65
+Route 12,Malir Mandir,Malir Session Court,0.22
+Route 12,Malir Session Court,Malir Mandir,0.22
+Route 12,Malir Session Court,Murghi Khana,2.68
+Route 12,Murghi Khana,Malir Session Court,2.68
+Route 12,Murghi Khana,Quaidabad,0.72
+Route 12,Quaidabad,Murghi Khana,0.72
 Route 12,Quaidabad,Dawood Chowrangi,0.61
+Route 12,Dawood Chowrangi,Quaidabad,0.61
 Route 12,Dawood Chowrangi,Babar Market,20.65
+Route 12,Babar Market,Dawood Chowrangi,20.65
 Route 12,Babar Market,Landhi Road,19.19
+Route 12,Landhi Road,Babar Market,19.19
 Route 12,Landhi Road,Nasir Jump,7.41
+Route 12,Nasir Jump,Landhi Road,7.41
 Route 12,Nasir Jump,Indus Hospital,1.45
+Route 12,Indus Hospital,Nasir Jump,1.45
 Route 12,Indus Hospital,Korangi Crossing,0.35
+Route 12,Korangi Crossing,Indus Hospital,0.35
 Route 12,Korangi Crossing,Qayyumabad,3.07
+Route 12,Qayyumabad,Korangi Crossing,3.07
 Route 12,Qayyumabad,Defence Mor,0.86
+Route 12,Defence Mor,Qayyumabad,0.86
 Route 12,Defence Mor,National Medical Center,10.63
+Route 12,National Medical Center,Defence Mor,10.63
 Route 12,National Medical Center,Gora Qabristan,13.22
+Route 12,Gora Qabristan,National Medical Center,13.22
 Route 12,Gora Qabristan,FTC,0.38
+Route 12,FTC,Gora Qabristan,0.38
+Route 12,FTC,Lines Area,1.98
+Route 12,Lines Area,FTC,1.98
 Route 12,Lines Area,Army Public School,22.49
+Route 12,Army Public School,Lines Area,22.49
 Route 12,Army Public School,Lucky Star Saddar,22.55
+Route 12,Lucky Star Saddar,Army Public School,22.55
 Route 13,Hawksbay,Mauripur,9.16
+Route 13,Mauripur,Hawksbay,9.16
 Route 13,Mauripur,Gulbai,5.9
+Route 13,Gulbai,Mauripur,5.9
 Route 13,Gulbai,Agra Taj,1.35
+Route 13,Agra Taj,Gulbai,1.35
 Route 13,Agra Taj,Daryabad,1.39
+Route 13,Daryabad,Agra Taj,1.39
+Route 13,Daryabad,Jinnah Brige,1.84
+Route 13,Jinnah Brige,Daryabad,1.84
+Route 13,Jinnah Brige,Tower,0.49
+Route 13,Tower,Jinnah Brige,0.49
+EV-1,CMH Malir Cantt,Tank Chowk,5.14
+EV-1,Tank Chowk,CMH Malir Cantt,5.14
+EV-1,Tank Chowk,Model Colony Mor,1.19
+EV-1,Model Colony Mor,Tank Chowk,1.19
+EV-1,Model Colony Mor,Jinnah Ave,17.0
+EV-1,Jinnah Ave,Model Colony Mor,17.0
 EV-1,Jinnah Ave,Airport,21.59
+EV-1,Airport,Jinnah Ave,21.59
 EV-1,Airport,Colony Gate,0.62
+EV-1,Colony Gate,Airport,0.62
 EV-1,Colony Gate,Nata Khan Bridge,1.42
+EV-1,Nata Khan Bridge,Colony Gate,1.42
 EV-1,Nata Khan Bridge,Drigh Road Station,1.14
+EV-1,Drigh Road Station,Nata Khan Bridge,1.14
 EV-1,Drigh Road Station,PAF Base Faisal,13.43
+EV-1,PAF Base Faisal,Drigh Road Station,13.43
+EV-1,PAF Base Faisal,Laal Kothi,19.56
+EV-1,Laal Kothi,PAF Base Faisal,19.56
+EV-1,Laal Kothi,Karsaz,3.47
+EV-1,Karsaz,Laal Kothi,3.47
 EV-1,Karsaz,Nursery,4.9
+EV-1,Nursery,Karsaz,4.9
 EV-1,Nursery,FTC,9.64
+EV-1,FTC,Nursery,9.64
 EV-1,FTC,Korangi Road,4.05
+EV-1,Korangi Road,FTC,4.05
 EV-1,Korangi Road,DHA Phase 1,1.53
+EV-1,DHA Phase 1,Korangi Road,1.53
 EV-1,DHA Phase 1,Masjid e Ayesha,13.78
+EV-1,Masjid e Ayesha,DHA Phase 1,13.78
+EV-1,Masjid e Ayesha,Clock Tower DHA,17.92
+EV-1,Clock Tower DHA,Masjid e Ayesha,17.92
+EV-1,Clock Tower DHA,Dolmen Mall Clifton,3.55
+EV-1,Dolmen Mall Clifton,Clock Tower DHA,3.55
 EV-2,Bahria Town,Dumba Goth,6.33
+EV-2,Dumba Goth,Bahria Town,6.33
 EV-2,Dumba Goth,Toll Plaza,35.4
+EV-2,Toll Plaza,Dumba Goth,35.4
 EV-2,Toll Plaza,Baqai University,30.7
+EV-2,Baqai University,Toll Plaza,30.7
 EV-2,Baqai University,Malir Cantt Gate 5,8.58
+EV-2,Malir Cantt Gate 5,Baqai University,8.58
+EV-2,Malir Cantt Gate 5,Malir Cantt Gate 6,0.0
+EV-2,Malir Cantt Gate 6,Malir Cantt Gate 5,0.0
+EV-2,Malir Cantt Gate 6,Tank Chowk,2.99
+EV-2,Tank Chowk,Malir Cantt Gate 6,2.99
+EV-2,Tank Chowk,Model Mor,1.1
+EV-2,Model Mor,Tank Chowk,1.1
+EV-2,Model Mor,Jinnah Ave,17.46
+EV-2,Jinnah Ave,Model Mor,17.46
 EV-2,Jinnah Ave,Malir Halt,19.44
+EV-2,Malir Halt,Jinnah Ave,19.44
+EV-3,Malir Cantt Check Post 5,Rim Jhim Tower,2.44
+EV-3,Rim Jhim Tower,Malir Cantt Check Post 5,2.44
+EV-3,Rim Jhim Tower,Safoora Chowrangi,1.59
+EV-3,Safoora Chowrangi,Rim Jhim Tower,1.59
+EV-3,Safoora Chowrangi,Mausamiyat Chowrangi,1.79
+EV-3,Mausamiyat Chowrangi,Safoora Chowrangi,1.79
+EV-3,Mausamiyat Chowrangi,Kamran Chowrangi,0.89
+EV-3,Kamran Chowrangi,Mausamiyat Chowrangi,0.89
 EV-3,Kamran Chowrangi,Darul Sehat Hospital,1.48
+EV-3,Darul Sehat Hospital,Kamran Chowrangi,1.48
 EV-3,Darul Sehat Hospital,Johar Chowrangi,2.2
+EV-3,Johar Chowrangi,Darul Sehat Hospital,2.2
 EV-3,Johar Chowrangi,Johar Mor,2.54
+EV-3,Johar Mor,Johar Chowrangi,2.54
 EV-3,Johar Mor,Millennium Mall,0.39
+EV-3,Millennium Mall,Johar Mor,0.39
 EV-3,Millennium Mall,Dalmia Road,1.7
+EV-3,Dalmia Road,Millennium Mall,1.7
 EV-3,Dalmia Road,Bahria University,33.37
+EV-3,Bahria University,Dalmia Road,33.37
 EV-3,Bahria University,National Stadium,35.1
+EV-3,National Stadium,Bahria University,35.1
 EV-3,National Stadium,Aga Khan Hospital,4.87
+EV-3,Aga Khan Hospital,National Stadium,4.87
 EV-3,Aga Khan Hospital,Liaquat National Hospital,3.53
+EV-3,Liaquat National Hospital,Aga Khan Hospital,3.53
 EV-3,Liaquat National Hospital,PIB Colony,1.46
+EV-3,PIB Colony,Liaquat National Hospital,1.46
 EV-3,PIB Colony,Jail Chowrangi,0.87
+EV-3,Jail Chowrangi,PIB Colony,0.87
 EV-3,Jail Chowrangi,Dawood Engineering University,1.13
+EV-3,Dawood Engineering University,Jail Chowrangi,1.13
 EV-3,Dawood Engineering University,Islamia College,9.83
+EV-3,Islamia College,Dawood Engineering University,9.83
 EV-3,Islamia College,People Secretariat Chowrangi,10.12
+EV-3,People Secretariat Chowrangi,Islamia College,10.12
 EV-3,People Secretariat Chowrangi,Numaish,1.12
+EV-3,Numaish,People Secretariat Chowrangi,1.12
 EV-4,Bahria Town,Dumba Goth,6.33
-EV-4,New Sabzi Mandi,Al Asif,1107.03
+EV-4,Dumba Goth,Bahria Town,6.33
+EV-4,Dumba Goth,M9 Toll Plaza,18.33
+EV-4,M9 Toll Plaza,Dumba Goth,18.33
+EV-4,M9 Toll Plaza,Jamali Pull,30.87
+EV-4,Jamali Pull,M9 Toll Plaza,30.87
+EV-4,Jamali Pull,New Sabzi Mandi,2.84
+EV-4,New Sabzi Mandi,Jamali Pull,2.84
+EV-4,New Sabzi Mandi,Al Asif,0.0
+EV-4,Al Asif,New Sabzi Mandi,0.0
 EV-4,Al Asif,Sohrab Goth,1.61
+EV-4,Sohrab Goth,Al Asif,1.61
 EV-4,Sohrab Goth,Water Pump,11.49
+EV-4,Water Pump,Sohrab Goth,11.49
 EV-4,Water Pump,Ayesha Manzil,11.89
+EV-4,Ayesha Manzil,Water Pump,11.89
 EV-5,DHA City,Bahria Town,14.15
+EV-5,Bahria Town,DHA City,14.15
 EV-5,Bahria Town,Dumba Goth,6.33
-EV-5,New Sabzi Mandi,Al Asif,1107.03
+EV-5,Dumba Goth,Bahria Town,6.33
+EV-5,Dumba Goth,M9 Toll Plaza,18.33
+EV-5,M9 Toll Plaza,Dumba Goth,18.33
+EV-5,M9 Toll Plaza,Jamali Pull,30.87
+EV-5,Jamali Pull,M9 Toll Plaza,30.87
+EV-5,Jamali Pull,New Sabzi Mandi,2.84
+EV-5,New Sabzi Mandi,Jamali Pull,2.84
+EV-5,New Sabzi Mandi,Al Asif,0.0
+EV-5,Al Asif,New Sabzi Mandi,0.0
 EV-5,Al Asif,Sohrab Goth,1.61
+EV-5,Sohrab Goth,Al Asif,1.61

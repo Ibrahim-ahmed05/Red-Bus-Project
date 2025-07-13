@@ -8,14 +8,13 @@ for route in data:
     unique_stops.update(route['stops'])
 
 coords = {}
-
 headers = {
     "User-Agent": "RedBus MVP (iamalik2005@gmail.com)"
 }
 
-for stop in unique_stops:
-    print(f"Fetching: {stop}")
-    query = f"{stop}, Karachi"
+for i, stop in enumerate(unique_stops):
+    clean_stop = stop.strip().replace('(', '').replace(')', '')
+    query = f"{clean_stop} Bus Stop, Karachi, Pakistan"
     url = "https://nominatim.openstreetmap.org/search"
     params = {"q": query, "format": "json"}
 
@@ -29,16 +28,25 @@ for stop in unique_stops:
                 coords[stop] = (lat, lon)
             else:
                 coords[stop] = (None, None)
-                print(f"No location found for: {stop}")
+                print(f"❌ No result: {stop}")
+                with open("failed_stops.txt", "a") as log:
+                    log.write(stop + "\n")
         else:
             coords[stop] = (None, None)
-            print(f"Error {res.status_code} for {stop}")
+            print(f"❌ Error {res.status_code}: {stop}")
     except Exception as e:
-        coords[stop] = (None,None)
-        print(f"Exception for {stop}: {e}")
+        coords[stop] = (None, None)
+        print(f"❌ Exception for {stop}: {e}")
 
-    time.sleep(1)  # Important to avoid rate limit
+    # Save partial results every 10 queries
+    if i % 10 == 0:
+        with open("stop_coordinates.json", "w") as f:
+            json.dump(coords, f, indent=2)
 
-# Save results
-with open('stop_coordinates.json', 'w') as f:
+    time.sleep(1)  # Avoid rate limiting
+
+# Final save
+with open("stop_coordinates.json", "w") as f:
     json.dump(coords, f, indent=2)
+
+print("✅ Coordinates fetch complete.")

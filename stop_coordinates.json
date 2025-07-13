@@ -8,12 +8,12 @@
     67.049954
   ],
   "Civic Centre": [
-    null,
-    null
+    24.8997,
+     67.0729
   ],
   "Shafiq Morr": [
-    null,
-    null
+    24.9571,
+    67.0761
   ],
   "Nasir Jump": [
     24.8204627,
@@ -44,8 +44,8 @@
     67.1790702
   ],
   "M9 Toll Plaza": [
-    null,
-    null
+   24.864,
+   67.3998
   ],
   "DHA City": [
     25.0140223,
@@ -59,25 +59,17 @@
     24.8508147,
     67.0195102
   ],
-  "Jutt Land": [
-    null,
-    null
-  ],
   "Baqai University": [
     24.9877326,
     67.2135973
   ],
   "UP Mor": [
-    null,
-    null
+    24.9728,
+     67.0668
   ],
   "Singer Chowrangi": [
     24.8507452,
     67.1812931
-  ],
-  "KPT Inter change": [
-    null,
-    null
   ],
   "M.T.Khan Road": [
     24.8431024,
@@ -100,32 +92,32 @@
     67.0674901
   ],
   "Submarine Chowk": [
-    null,
-    null
+    24.8281,
+    67.0421
   ],
   "Nadra Center Malir": [
-    null,
-    null
+    24.8738,
+    67.1945
   ],
   "Army Public School": [
     24.8350239,
     67.2553653
   ],
   "Bhains Colony More": [
-    null,
-    null
+    24.8559,
+    67.2583
   ],
   "Malir Cantt Check Post 5": [
-    null,
-    null
+    24.9478,
+     67.1827
   ],
   "Nagan Chowrangi": [
     24.9650421,
     67.0668664
   ],
   "Clock Tower DHA": [
-    null,
-    null
+    24.7783,
+    67.0542
   ],
   "Dalmia Road": [
     24.9018971,
@@ -144,8 +136,8 @@
     67.0912849
   ],
   "Model Colony Mor": [
-    null,
-    null
+    24.9023,
+    67.1892
   ],
   "Rahat Park": [
     24.815826,
@@ -204,8 +196,8 @@
     67.0899584
   ],
   "Saudabd": [
-    null,
-    null
+    24.902,
+    67.2129
   ],
   "Sher Shah": [
     24.8843625,
@@ -215,13 +207,9 @@
     24.9237215,
     67.137763
   ],
-  "KPT Interchange upto Shan Chowrangi": [
-    null,
-    null
-  ],
   "Johar Morr": [
-    null,
-    null
+    24.9044,
+    67.1136
   ],
   "Laloo Khait": [
     24.918973,
@@ -248,16 +236,16 @@
     67.0626743
   ],
   "Gulsahan e Hadeed": [
-    null,
-    null
+    24.8717,
+    67.3593
   ],
   "People Secretariat Chowrangi": [
     24.8770859,
     67.0437698
   ],
-  "PICD": [
-    null,
-    null
+  "PIDC": [
+    24.8404,
+    67.033
   ],
   "Qayyumabad": [
     24.829419,
@@ -268,8 +256,8 @@
     66.9719249
   ],
   "CMH Malir Cantt": [
-    null,
-    null
+    24.9503,
+    67.2155
   ],
   "Bahria Town": [
     24.9940186,
@@ -284,24 +272,24 @@
     67.0608428
   ],
   "Model Mor": [
-    null,
-    null
+    24.9034,
+    67.1819
   ],
   "Jinnah Ave": [
     25.0080166,
     67.3110546
   ],
   "Malir Session Court": [
-    null,
-    null
+    24.8738,
+    67.1945
   ],
   "Murghi Khana": [
-    null,
-    null
+    24.8601,
+    67.2163
   ],
   "Jinnah Brige": [
-    null,
-    null
+    24.8458,
+     66.993
   ],
   "Ayesha Manzil": [
     24.9267993,
@@ -316,8 +304,8 @@
     67.1882644
   ],
   "Shafiq Mor": [
-    null,
-    null
+    24.9571,
+    67.0761
   ],
   "Numaish Chowrangi": [
     24.8730633,
@@ -368,16 +356,16 @@
     67.0540413
   ],
   "Liaqautabad 10": [
-    null,
-    null
+    24.9093,
+    67.0494
   ],
   "KDA Chowrangi": [
     24.9314051,
     67.0375124
   ],
   "Jamali Pull": [
-    null,
-    null
+    24.9733,
+    67.1184
   ],
   "Karimabad": [
     24.9195535,
@@ -404,8 +392,8 @@
     67.2117445
   ],
   "New Sabzi Mandi": [
-    32.4841918,
-    74.5439157
+    24.9649043,
+    67.0917538
   ],
   "Abdullah Goth": [
     24.8666314,
@@ -452,8 +440,8 @@
     66.9912046
   ],
   "Steel Mill More": [
-    null,
-    null
+    24.80689,
+    67.34737
   ],
   "Masjid e Ayesha": [
     24.8698622,
@@ -484,8 +472,8 @@
     67.0544298
   ],
   "Port Bin Qasim More": [
-    null,
-    null
+    24.825,
+    67.133
   ],
   "Darul Sehat Hospital": [
     24.9142362,
@@ -500,8 +488,8 @@
     67.0476057
   ],
   "Naddi Kinara": [
-    null,
-    null
+    24.8422,
+    67.0516
   ],
   "Light House": [
     24.7939697,
@@ -524,8 +512,8 @@
     66.9911979
   ],
   "Mausamiyat Chowrangi": [
-    null,
-    null
+    24.9287,
+    67.1309
   ],
   "National Highway 5": [
     24.8678996,
@@ -544,24 +532,24 @@
     67.1135863
   ],
   "CBM University": [
-    null,
-    null
+    24.8127,
+    67.1178
   ],
   "Khaddi Stop": [
-    null,
-    null
+    24.9053506,
+    67.2197443
   ],
   "Prince Aly Boys School": [
-    null,
-    null
+    24.8738,
+    67.1945
   ],
   "Shah Faisal Colony": [
     24.8810955,
     67.145214
   ],
   "Laal Kothi": [
-    null,
-    null
+    24.862396,
+    67.06905
   ],
   "Khokhrapar": [
     24.9040971,
@@ -580,32 +568,32 @@
     67.033204
   ],
   "Salah Uddin Ayubi Road": [
-    null,
-    null
+    24.87530,
+    67.08780
   ],
   "Babar Market": [
     24.8586062,
     67.0038439
   ],
   "Teen Hati": [
-    null,
-    null
+    24.8724,
+    67.035
   ],
   "Rim Jhim Tower": [
     24.9404477,
     67.1598766
   ],
   "Malir Cantt Gate 6": [
-    null,
-    null
+    24.92708,
+    67.1610121
   ],
   "Safoora Chowrangi": [
-    null,
-    null
+    24.9304,
+    67.1486
   ],
   "Miran Nakka": [
-    null,
-    null
+    24.852,
+    66.994
   ],
   "Khokrapar": [
     24.9053506,
@@ -624,8 +612,8 @@
     67.0341289
   ],
   "Liaquatabad 10 Number": [
-    null,
-    null
+    24.9093,
+    67.0494
   ],
   "Saudabad Chowrangi": [
     24.9008268,
@@ -644,16 +632,16 @@
     67.0401855
   ],
   "Bilawal Chowrangi": [
-    null,
-    null
+    24.810977,
+    67.0301196
   ],
   "COD": [
     24.9119928,
     67.1250218
   ],
   "Fawwara Chowk": [
-    null,
-    null
+    24.8504651,
+    67.0301733
   ],
   "Abdullah Shah Ghazi": [
     24.810977,
@@ -680,16 +668,16 @@
     67.051289
   ],
   "UP More": [
-    null,
-    null
+    24.9728,
+    67.0668
   ],
   "Defence Mor": [
     24.8336954,
     67.0736861
   ],
   "Do TalwarAbdullah Shah Ghazi": [
-    null,
-    null
+    24.8338179,
+    67.033666
   ],
   "Dawood Engineering University": [
     24.8787907,
