@@ -22,7 +22,9 @@ body {
   position: relative;
   background-attachment: fixed;
 }
-
+.option{
+  color: white;
+}
 body::before {
   content: none;
 }
