@@ -1,22 +1,5 @@
 import { useState, useEffect } from "react";
 
-const busLoaderStyle = {
-  display: "flex",
-  flexDirection: "column",
-  alignItems: "center",
-  justifyContent: "center",
-  minHeight: "160px",
-  margin: "2em 0 1.5em 0",
-};
-
-const busIconStyle = {
-  width: "90px",
-  height: "60px",
-  marginBottom: "0.5em",
-  animation: "bus-move 1.2s infinite linear alternate",
-  display: "block",
-};
-
 const Search = () => {
   const [source, setSource] = useState("");
   const [destination, setDestination] = useState("");
@@ -24,227 +7,215 @@ const Search = () => {
   const [result, setResult] = useState(null);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
-  const [showBus, setShowBus] = useState(false);
 
   useEffect(() => {
     fetch("http://localhost:8000/stops")
       .then((res) => res.json())
-      .then((data) => setStops(data));
+      .then((data) => setStops(data))
+      .catch(() => setError("Could not load stops. Please check if the server is running."));
   }, []);
 
   const handleSearch = async () => {
+    if (!source || !destination) {
+      setError("Please select both source and destination.");
+      return;
+    }
+    if (source === destination) {
+      setError("Source and destination cannot be the same.");
+      return;
+    }
+
     setLoading(true);
     setResult(null);
     setError("");
-    setShowBus(false);
+
     try {
       const res = await fetch(`http://localhost:8000/search/${source},${destination}`);
       if (!res.ok) {
         const errData = await res.json();
-        setError(errData.detail || "No route found.");
+        setError(errData.detail || "No route found for this selection.");
         setLoading(false);
         return;
       }
       const data = await res.json();
+      // Simulate a small delay for premium feel
       setTimeout(() => {
         setResult(data);
-        setShowBus(false);
         setLoading(false);
-      }, 2200); // Show bus animation for ~2.2 seconds
-      setShowBus(true);
+      }, 800);
     } catch (err) {
-      setError("Failed to fetch route. Please try again later.");
+      setError("Failed to connect to the server. Please ensure the backend is running.");
       setLoading(false);
     }
   };
 
-  const RedBusSVG = () => (
-    <svg style={busIconStyle} viewBox="0 0 90 60" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <rect x="5" y="15" width="80" height="30" rx="8" fill="#e10600" stroke="#fff" strokeWidth="2" />
-      <rect x="12" y="22" width="18" height="13" rx="3" fill="#fff" fillOpacity="0.85" />
-      <rect x="34" y="22" width="18" height="13" rx="3" fill="#fff" fillOpacity="0.85" />
-      <rect x="56" y="22" width="18" height="13" rx="3" fill="#fff" fillOpacity="0.85" />
-      <circle cx="20" cy="48" r="6" fill="#181818" stroke="#fff" strokeWidth="2" />
-      <circle cx="70" cy="48" r="6" fill="#181818" stroke="#fff" strokeWidth="2" />
-      <rect x="5" y="35" width="80" height="10" rx="3" fill="#b30000" fillOpacity="0.7" />
-    </svg>
-  );
-
   return (
-    <section style={{
-      display: "flex",
-      flexDirection: "column",
-      alignItems: "center",
-      justifyContent: "center",
-      minHeight: "70vh",
-      padding: "3em 1em 2em 1em",
-      position: "relative",
-      zIndex: 1,
-    }}>
-      <div className="card" style={{
-        maxWidth: "600px",
-        width: "100%",
-        background: "rgba(255,255,255,0.04)",
-        border: "1.5px solid var(--primary-red)",
-        boxShadow: "0 8px 32px rgba(255,59,63,0.10)",
-        borderRadius: "var(--radius)",
-        padding: "2.5em 2em 2em 2em",
-        textAlign: "center",
-        backdropFilter: "blur(1.5px)",
-      }}>
-        <h2 style={{
-          fontSize: "2.3rem",
-          fontWeight: 900,
-          color: "var(--primary-red)",
-          marginBottom: "1.2em",
-          letterSpacing: "0.04em",
-          textShadow: "0 2px 8px rgba(0,0,0,0.10)",
-        }}>
-          Search Bus Routes
-        </h2>
-        <select
-          value={source}
-          onChange={(e) => setSource(e.target.value)}
-          style={{
-            width: "100%",
-            padding: "1.1em",
-            borderRadius: "var(--radius)",
-            border: "1.5px solid var(--primary-red)",
-            marginBottom: "1em",
-            fontSize: "1.25rem",
-            background: "rgba(255, 255, 255, 0.96)",
-            color: "var(--black)",
-            fontWeight: 700,
-            outline: "none",
-            boxShadow: "0 2px 8px rgba(225,6,0,0.04)",
-            transition: "border-color var(--transition), box-shadow var(--transition)"
-          }}
-        >
-          <option value="">Select Source</option>
-          {stops.map((stop) => (
-            <option key={stop} value={stop}>{stop}</option>
-          ))}
-        </select>
-        <select
-          value={destination}
-          onChange={(e) => setDestination(e.target.value)}
-          style={{
-            width: "100%",
-            padding: "1.1em",
-            borderRadius: "var(--radius)",
-            border: "1.5px solid var(--primary-red)",
-            marginBottom: "1.5em",
-            fontSize: "1.25rem",
-            background: "rgba(255,255,255,0.96)",
-            color: "var(--black)",
-            fontWeight: 700,
-            outline: "none",
-            boxShadow: "0 2px 8px rgba(225,6,0,0.04)",
-            transition: "border-color var(--transition), box-shadow var(--transition)"
-          }}
-        >
-          <option value="">Select Destination</option>
-          {stops.map((stop) => (
-            <option key={stop} value={stop}>{stop}</option>
-          ))}
-        </select>
-        <button
-          onClick={handleSearch}
-          style={{
-            width: "100%",
-            background: "var(--primary-red)",
-            color: "#fff",
-            padding: "1.1em 0",
-            borderRadius: "var(--radius)",
-            fontWeight: 900,
-            fontSize: "1.25rem",
-            letterSpacing: "0.04em",
-            boxShadow: "0 4px 24px rgba(255,59,63,0.10)",
-            border: "none",
-            marginBottom: "1.5em",
-            cursor: "pointer",
-            transition: "background var(--transition), color var(--transition), box-shadow var(--transition)"
-          }}
-          onMouseOver={e => { e.target.style.background = 'var(--white)'; e.target.style.color = 'var(--primary-red)'; }}
-          onMouseOut={e => { e.target.style.background = 'var(--primary-red)'; e.target.style.color = '#fff'; }}
-        >
-          Find Route
-        </button>
-        {loading && (
-          <div style={busLoaderStyle}>
-            <RedBusSVG />
-            <span style={{ color: "var(--primary-red)", fontWeight: 800, fontSize: "1.25rem", marginTop: "0.5em" }}>Finding the best route...</span>
+    <div className="section-padding animate-fade-in">
+      <div className="container" style={{ maxWidth: "700px" }}>
+        <div style={{ textAlign: "center", marginBottom: "3rem" }}>
+          <h2 style={{ fontSize: "2.5rem", marginBottom: "1rem" }}>Route <span className="text-gradient">Planner</span></h2>
+          <p className="text-muted">Select your starting point and destination to find the best route.</p>
+        </div>
+
+        <div className="glass-card">
+          <div style={{ marginBottom: "1.5rem" }}>
+            <label style={{ display: "block", marginBottom: "0.5rem", fontSize: "0.9rem", color: "var(--text-muted)" }}>Source</label>
+            <select
+              value={source}
+              onChange={(e) => setSource(e.target.value)}
+              className="input-base"
+              style={{ appearance: "none" }}
+            >
+              <option value="">Select starting stop</option>
+              {stops.map((stop) => (
+                <option key={stop} value={stop} style={{ background: "var(--bg-surface)" }}>{stop}</option>
+              ))}
+            </select>
           </div>
-        )}
-        {showBus && !loading && (
-          <div style={busLoaderStyle}>
-            <RedBusSVG />
-            <span style={{ color: "var(--primary-red)", fontWeight: 800, fontSize: "1.25rem", marginTop: "0.5em" }}>Your RedBus is arriving...</span>
+
+          <div style={{ marginBottom: "2rem" }}>
+            <label style={{ display: "block", marginBottom: "0.5rem", fontSize: "0.9rem", color: "var(--text-muted)" }}>Destination</label>
+            <select
+              value={destination}
+              onChange={(e) => setDestination(e.target.value)}
+              className="input-base"
+              style={{ appearance: "none" }}
+            >
+              <option value="">Select destination stop</option>
+              {stops.map((stop) => (
+                <option key={stop} value={stop} style={{ background: "var(--bg-surface)" }}>{stop}</option>
+              ))}
+            </select>
           </div>
-        )}
-        {error && !loading && !showBus && (
-          <div style={{ color: "var(--primary-red)", fontWeight: 800, fontSize: "1.2rem", margin: "1em 0" }}>{error}</div>
-        )}
-        {result && !loading && !showBus && !error && (
-          <div style={{
-            marginTop: "2em",
-            background: "#23272f",
-            borderRadius: "var(--radius)",
-            padding: "2.2em 1.5em 1.5em 1.5em",
-            boxShadow: "0 4px 24px rgba(0,0,0,0.18)",
-            textAlign: "left",
-            border: "2.5px solid var(--primary-red)",
-            maxWidth: "100%",
-          }}>
-            <h3 style={{
-              fontSize: "2rem",
-              fontWeight: 900,
-              color: "var(--primary-red)",
-              marginBottom: "0.7em",
-              letterSpacing: "0.03em",
-              textShadow: "0 2px 8px rgba(0,0,0,0.10)",
-              textAlign: "center",
-              marginLeft: "auto",
-              marginRight: "auto"
-            }}>
-              <span style={{ color: "var(--primary-red)", fontWeight: 900 }}>Total Fare:</span>
-              <span style={{ color: "#4be37a", fontWeight: 900, marginLeft: "0.5em" }}>Rs. {result.total_fare}</span>
-            </h3>
+
+          <button
+            onClick={handleSearch}
+            className="btn btn-primary"
+            style={{ width: "100%", padding: "1rem" }}
+            disabled={loading}
+          >
+            {loading ? "Searching..." : "Find Best Route"}
+          </button>
+
+          {error && (
             <div style={{
-              fontSize: "1.3rem",
-              color: "#f7f7fa",
-              fontWeight: 700,
-              marginBottom: "1.2em",
-              display: "flex",
-              flexDirection: "column",
-              alignItems: "center",
-              gap: "0.7em",
-              textAlign: "center"
+              marginTop: "1.5rem",
+              padding: "1rem",
+              background: "rgba(230, 57, 70, 0.1)",
+              borderRadius: "var(--radius-md)",
+              color: "var(--primary)",
+              fontSize: "0.9rem",
+              textAlign: "center",
+              border: "1px solid rgba(230, 57, 70, 0.2)"
             }}>
-              <h3 style={{ color: "white", display: "block", marginBottom: "0.2em" }}>Full Path:</h3>
-              <div style={{ display: "flex", flexWrap: "wrap", justifyContent: "center", gap: "0.2em" }}>
-                {result.path.map((stop, idx) => (
-                  <span key={stop} style={{
-                    color: "#4be37a",
-                    fontWeight: 900,
-                    fontSize: "1.3rem",
-                    letterSpacing: "0.01em"
-                  }}>{stop}{idx !== result.path.length - 1 && <span style={{ color: "var(--primary-red)", fontWeight: 900, fontSize: "1.5rem" }}> ➡ </span>}</span>
-                ))}
+              {error}
+            </div>
+          )}
+        </div>
+
+        {loading && (
+          <div style={{ textAlign: "center", marginTop: "3rem" }}>
+            <div className="spinner" style={{
+              width: "40px",
+              height: "40px",
+              border: "3px solid var(--border-subtle)",
+              borderTopColor: "var(--primary)",
+              borderRadius: "50%",
+              margin: "0 auto 1rem auto",
+              animation: "spin 1s linear infinite"
+            }} />
+            <style>{`
+              @keyframes spin { to { transform: rotate(360deg); } }
+            `}</style>
+            <p className="text-muted">Calculating optimal path...</p>
+          </div>
+        )}
+
+        {result && !loading && (
+          <div className="animate-fade-in" style={{ marginTop: "3rem" }}>
+            <div className="glass-card" style={{ borderLeft: "4px solid var(--primary)" }}>
+              <div style={{
+                display: "flex",
+                justifyContent: "space-between",
+                alignItems: "center",
+                marginBottom: "2rem",
+                paddingBottom: "1.5rem",
+                borderBottom: "1px solid var(--border-subtle)"
+              }}>
+                <div>
+                  <h3 style={{ fontSize: "1.5rem", marginBottom: "0.25rem" }}>Route Found</h3>
+                  <p className="text-muted" style={{ fontSize: "0.9rem" }}>Shortest journey calculated</p>
+                </div>
+                <div style={{ textAlign: "right" }}>
+                  <div style={{ fontSize: "1.8rem", fontWeight: "800", color: "var(--primary)" }}>Rs. {result.total_fare}</div>
+                  <p className="text-muted" style={{ fontSize: "0.8rem" }}>Total Estimated Fare</p>
+                </div>
+              </div>
+
+              <div style={{ marginBottom: "2.5rem" }}>
+                <h4 style={{ fontSize: "1.1rem", marginBottom: "1.5rem", color: "var(--text-muted)" }}>Path Overview</h4>
+                <div style={{
+                  display: "flex",
+                  alignItems: "center",
+                  flexWrap: "wrap",
+                  gap: "1rem"
+                }}>
+                  {result.path.map((stop, idx) => (
+                    <div key={idx} style={{ display: "flex", alignItems: "center", gap: "1rem" }}>
+                      <div style={{
+                        padding: "0.5rem 1rem",
+                        background: "var(--bg-surface)",
+                        borderRadius: "var(--radius-sm)",
+                        fontSize: "0.9rem",
+                        fontWeight: "600",
+                        border: "1px solid var(--border-subtle)"
+                      }}>
+                        {stop}
+                      </div>
+                      {idx < result.path.length - 1 && (
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--text-dim)" strokeWidth="2"><polyline points="9 18 15 12 9 6" /></svg>
+                      )}
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              <div>
+                <h4 style={{ fontSize: "1.1rem", marginBottom: "1.5rem", color: "var(--text-muted)" }}>Journey Steps</h4>
+                <div style={{ display: "flex", flexDirection: "column", gap: "1rem" }}>
+                  {result.steps.map((step, idx) => (
+                    <div key={idx} style={{
+                      padding: "1.2rem",
+                      background: "rgba(255,255,255,0.03)",
+                      borderRadius: "var(--radius-md)",
+                      border: "1px solid var(--border-subtle)",
+                      display: "flex",
+                      justifyContent: "space-between",
+                      alignItems: "center"
+                    }}>
+                      <div>
+                        <div style={{ fontSize: "0.8rem", color: "var(--primary)", fontWeight: "700", textTransform: "uppercase", marginBottom: "0.25rem" }}>
+                          {step.route}
+                        </div>
+                        <div style={{ fontWeight: "600" }}>
+                          {step.from} <span style={{ color: "var(--text-dim)", margin: "0 0.5rem" }}>to</span> {step.to}
+                        </div>
+                        <div style={{ fontSize: "0.85rem", color: "var(--text-muted)", marginTop: "0.25rem" }}>
+                          Distance: {step.distance_km} km
+                        </div>
+                      </div>
+                      <div style={{ fontSize: "1.1rem", fontWeight: "700", color: "#4be37a" }}>
+                        Rs. {step.fare}
+                      </div>
+                    </div>
+                  ))}
+                </div>
               </div>
             </div>
-            <h2 style={{ color: "white", textAlign: "center" }}>Required Bus Routes:-</h2>
-            <ul style={{ margin: 0, paddingLeft: "1.2em", color: "#f7f7fa", fontSize: "1.13rem", fontWeight: 600 }}>
-              {result.steps.map((step, index) => (
-                <li key={index} style={{ marginBottom: "0.7em", background: "rgba(255,59,63,0.07)", borderRadius: "8px", padding: "0.7em 1em" }}>
-                  <span style={{ color: "var(--primary-red)", fontWeight: 800, fontSize: "1.1rem" }}>'{step.route}'</span> from <b style={{ color: "#f7f7fa" }}>{step.from}</b> to <b style={{ color: "#f7f7fa" }}>{step.to}</b> <span style={{ color: "#f7f7fa", fontWeight: 700 }}>({step.distance_km} km)</span> <span style={{ color: "#4be37a", fontWeight: 900, marginLeft: "0.5em" }}>Rs. {step.fare}</span>
-                </li>
-              ))}
-            </ul>
           </div>
         )}
       </div>
-    </section >
+    </div>
   );
 };
 

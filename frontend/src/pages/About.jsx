@@ -2,93 +2,83 @@ import React from "react";
 
 const About = () => {
   return (
-    <section style={{
-      display: "flex",
-      flexDirection: "column",
-      alignItems: "center",
-      justifyContent: "center",
-      minHeight: "70vh",
-      padding: "3em 1em 2em 1em",
-      position: "relative",
-      zIndex: 1,
-    }}>
-      <div className="card" style={{
-        maxWidth: "600px",
-        background: "rgba(255,255,255,0.04)",
-        border: "1.5px solid var(--primary-red)",
-        boxShadow: "0 8px 32px rgba(225,6,0,0.10)",
-        borderRadius: "var(--radius)",
-        padding: "2.5em 2em 2em 2em",
-        textAlign: "center",
-        backdropFilter: "blur(2px)",
-      }}>
-        <h2 style={{
-          fontSize: "2.2rem",
-          fontWeight: 900,
-          color: "var(--primary-red)",
-          marginBottom: "0.7em",
-          letterSpacing: "0.03em",
-          textShadow: "0 2px 8px rgba(0,0,0,0.10)",
-        }}>
-          About EZTrip
-        </h2>
-        <p style={{
-          fontSize: "1.15rem",
-          color: "var(--white)",
-          marginBottom: "1.5em",
-          lineHeight: 1.7,
-          fontWeight: 500,
-        }}>
-          EZTrip is a smart and efficient tool to help commuters in Karachi navigate the Red Bus system easily. We aim to simplify public transport with real-time route discovery, fare estimations, and stop-to-stop instructions.<br /><br />
-          <span style={{ color: "var(--primary-red)", fontWeight: 700 }}>This project is built by:</span>
-        </p>
-        <div style={{
-          background: "rgba(255,255,255,0.10)",
-          borderRadius: "var(--radius)",
-          padding: "1.2em 1em 1em 1em",
-          marginBottom: "1.5em",
-          boxShadow: "0 2px 8px rgba(225,6,0,0.08)",
-        }}>
-          <h3 style={{
-            color: "var(--primary-red)",
-            fontWeight: 800,
-            fontSize: "1.3rem",
-            marginBottom: "0.3em",
-          }}>
-            Ibrahim Ahmed
-          </h3>
-          <p style={{ color: "var(--white)", fontWeight: 600, marginBottom: "0.5em" }}>
-            CS Student at FAST National University
+    <section className="section-padding animate-fade-in">
+      <div className="container" style={{ maxWidth: "800px" }}>
+        <div style={{ textAlign: "center", marginBottom: "4rem" }}>
+          <h1 style={{ fontSize: "3rem", marginBottom: "1rem" }}>
+            About <span className="text-gradient">EZTrip</span>
+          </h1>
+          <p className="text-muted" style={{ maxWidth: "600px", margin: "0 auto" }}>
+            Connecting Karachi, one stop at a time.
           </p>
-          <div style={{ display: "flex", justifyContent: "center", gap: "1.5em", marginBottom: "0.5em" }}>
-            <a href="https://www.linkedin.com/in/ibrahim-ahmed05/" target="_blank" rel="noopener noreferrer" style={{ color: "var(--primary-red)", fontWeight: 700, textDecoration: "none", fontSize: "1.1rem" }}>LinkedIn</a>
-            <a href="https://github.com/ibrahim-ahmed05" target="_blank" rel="noopener noreferrer" style={{ color: "var(--primary-red)", fontWeight: 700, textDecoration: "none", fontSize: "1.1rem" }}>GitHub</a>
+        </div>
+
+        <div className="glass-card" style={{ textAlign: "left" }}>
+          <p style={{
+            fontSize: "1.1rem",
+            marginBottom: "2.5rem",
+            lineHeight: 1.8,
+            color: "var(--text-muted)"
+          }}>
+            EZTrip is a premium navigation tool designed specifically for Karachi's Red Bus network. Our mission is to make public transportation more accessible, predictable, and stress-free for every citizen.<br /><br />
+            Using advanced pathfinding algorithms, we provide the most efficient travel options, combining multiple routes when necessary to get you to your destination faster and cheaper.
+          </p>
+
+          <div style={{
+            borderTop: "1px solid var(--border-subtle)",
+            paddingTop: "2.5rem",
+            marginTop: "1rem"
+          }}>
+            <h3 style={{ fontSize: "1.3rem", marginBottom: "2rem", color: "var(--primary)" }}>The Developer</h3>
+
+            <div style={{
+              display: "flex",
+              alignItems: "center",
+              gap: "1.5rem",
+              flexWrap: "wrap"
+            }}>
+              <div style={{
+                width: "80px",
+                height: "80px",
+                borderRadius: "20px",
+                background: "linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%)",
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+                fontSize: "2rem",
+                fontWeight: "800",
+                color: "white",
+                boxShadow: "var(--shadow-md)"
+              }}>
+                IA
+              </div>
+
+              <div>
+                <h4 style={{ fontSize: "1.2rem", marginBottom: "0.25rem" }}>Ibrahim Ahmed</h4>
+                <p className="text-muted" style={{ marginBottom: "1rem" }}>CS Student @ FAST National University</p>
+
+                <div style={{ display: "flex", gap: "1rem" }}>
+                  <a href="https://www.linkedin.com/in/ibrahim-ahmed05/" target="_blank" rel="noopener noreferrer" className="btn btn-outline" style={{ padding: "0.5rem 1rem", fontSize: "0.85rem" }}>
+                    LinkedIn
+                  </a>
+                  <a href="https://github.com/ibrahim-ahmed05" target="_blank" rel="noopener noreferrer" className="btn btn-outline" style={{ padding: "0.5rem 1rem", fontSize: "0.85rem" }}>
+                    GitHub
+                  </a>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
-        <a
-          href="/contact"
-          style={{
-            display: "inline-block",
-            background: "var(--primary-red)",
-            color: "var(--white)",
-            padding: "0.9em 2.2em",
-            borderRadius: "var(--radius)",
-            fontWeight: 700,
-            fontSize: "1.1rem",
-            letterSpacing: "0.02em",
-            boxShadow: "0 4px 24px rgba(225,6,0,0.10)",
-            textDecoration: "none",
-            marginTop: "1em",
-            transition: "background var(--transition), color var(--transition), box-shadow var(--transition)",
-          }}
-          onMouseOver={e => { e.target.style.background = 'var(--white)'; e.target.style.color = 'var(--primary-red)'; }}
-          onMouseOut={e => { e.target.style.background = 'var(--primary-red)'; e.target.style.color = 'var(--white)'; }}
-        >
-          Contact Me
-        </a>
+
+        <div style={{ textAlign: "center", marginTop: "4rem" }}>
+          <a href="mailto:contact@eztrip.pk" className="btn btn-primary" style={{ padding: "1rem 3rem" }}>
+            Get in Touch
+          </a>
+        </div>
       </div>
     </section>
   );
 };
 
 export default About;
+

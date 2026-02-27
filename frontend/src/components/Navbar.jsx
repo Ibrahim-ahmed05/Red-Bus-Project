@@ -1,88 +1,104 @@
-import "../App.css";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import redbusLogo from "../assets/redbus3.jpg";
 
 const Navbar = () => {
+  const location = useLocation();
+
+  const navLinkStyle = (path) => ({
+    color: location.pathname === path ? "var(--primary)" : "var(--text-main)",
+    fontWeight: location.pathname === path ? "700" : "500",
+    fontSize: "0.95rem",
+    textDecoration: "none",
+    padding: "0.5rem 0.75rem",
+    borderRadius: "var(--radius-sm)",
+    transition: "var(--transition)",
+    whiteSpace: "nowrap"
+  });
+
   return (
     <nav style={{
-      background: "#fff",
-      boxShadow: "var(--shadow)",
-      padding: "0.5em 1.2em",
-      display: "flex",
-      alignItems: "center",
-      justifyContent: "flex-start",
+      background: "rgba(15, 17, 21, 0.8)",
+      backdropFilter: "blur(12px)",
+      WebkitBackdropFilter: "blur(12px)",
+      padding: "0.75rem 0",
       position: "sticky",
       top: 0,
-      left: 0,
-      right: 0,
       zIndex: 1000,
-      margin: 0,
-      minHeight: "64px",
-      borderBottom: "1.5px solid #ececec"
+      borderBottom: "1px solid var(--border-subtle)"
     }}>
-      <Link to="/" style={{ display: "flex", alignItems: "center", gap: "0.7em", textDecoration: "none" }}>
-        <div style={{
-          height: "44px",
-          width: "44px",
-          borderRadius: "50%",
-          background: "linear-gradient(135deg, #fff 60%, #ff3b3f 100%)",
-          boxShadow: "0 2px 8px rgba(255,59,63,0.10)",
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "center",
-          border: "2px solid #ff3b3f",
-          transition: "box-shadow 0.2s, border 0.2s",
-          overflow: "hidden"
-        }}
-          className="navbar-logo-hover"
-        >
-          <img
-            src={redbusLogo}
-            alt="EZTrip Logo"
-            style={{
-              height: "32px",
-              width: "32px",
-              objectFit: "cover",
-              borderRadius: "50%",
-              display: "block"
-            }}
-          />
-        </div>
-        <span style={{
-          fontWeight: 900,
-          fontSize: "1.85rem",
-          letterSpacing: "0.045em",
-          fontFamily: "Montserrat, Roboto, Arial, sans-serif",
-          display: "flex",
-          alignItems: "center",
-          gap: "0.05em"
-        }}>
-          <span style={{ color: "var(--primary-red)" }}>EZ</span>
-          <span style={{ color: "var(--black)" }}>Trip</span>
-        </span>
-      </Link>
-      <div style={{ display: "flex", gap: "1.2em", marginLeft: "1.5em" }}>
-        <Link to="/" style={{ color: "var(--black)", fontWeight: 600, fontSize: "1.22rem", textDecoration: "none", padding: "0.2em 0.9em", borderRadius: "8px", transition: "background 0.18s, color 0.18s" }} className="navbar-link-hover">Home</Link>
-        <Link to="/search" style={{ color: "var(--black)", fontWeight: 600, fontSize: "1.22rem", textDecoration: "none", padding: "0.2em 0.9em", borderRadius: "8px", transition: "background 0.18s, color 0.18s" }} className="navbar-link-hover">Search</Link>
-        <Link to="/routes" style={{ color: "var(--black)", fontWeight: 600, fontSize: "1.22rem", textDecoration: "none", padding: "0.2em 0.9em", borderRadius: "8px", transition: "background 0.18s, color 0.18s" }} className="navbar-link-hover">View Routes</Link>
-        <Link to="/about" style={{ color: "var(--black)", fontWeight: 600, fontSize: "1.22rem", textDecoration: "none", padding: "0.2em 0.9em", borderRadius: "8px", transition: "background 0.18s, color 0.18s" }} className="navbar-link-hover">About</Link>
-      </div>
-      <div style={{ flex: 1 }} />
-      <span className="navbar-tagline-animated" style={{
-        color: "var(--primary-red)",
-        fontWeight: 600,
-        fontSize: "1.18rem",
-        marginLeft: "1.2em",
-        letterSpacing: "0.18em",
-        fontFamily: "'Pacifico', 'Caveat', cursive, 'Montserrat', sans-serif",
-        whiteSpace: "nowrap",
-        alignSelf: "center",
-        animation: "taglineFadeIn 1.5s cubic-bezier(0.4,0,0.2,1) both"
+      <div className="container" style={{
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "space-between",
+        flexWrap: "wrap",
+        gap: "1rem"
       }}>
-        Making your trip easier
-      </span>
+        <Link to="/" style={{ display: "flex", alignItems: "center", gap: "0.75rem", textDecoration: "none" }}>
+          <div style={{
+            height: "36px",
+            width: "36px",
+            borderRadius: "8px",
+            background: "var(--primary)",
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+            boxShadow: "0 0 15px rgba(230, 57, 70, 0.3)",
+            overflow: "hidden"
+          }}>
+            <img
+              src={redbusLogo}
+              alt="EZTrip"
+              style={{ height: "100%", width: "100%", objectFit: "cover" }}
+            />
+          </div>
+          <span style={{
+            fontWeight: 800,
+            fontSize: "1.25rem",
+            color: "var(--text-main)",
+            letterSpacing: "-0.02em",
+            fontFamily: "Outfit, sans-serif"
+          }}>
+            EZ<span style={{ color: "var(--primary)" }}>Trip</span>
+          </span>
+        </Link>
+
+        <div style={{
+          display: "flex",
+          gap: "0.25rem",
+          alignItems: "center",
+          overflowX: "auto",
+          maxWidth: "100%",
+          paddingBottom: "2px"
+        }} className="no-scrollbar">
+          <Link to="/" style={navLinkStyle("/")}>Home</Link>
+          <Link to="/search" style={navLinkStyle("/search")}>Search</Link>
+          <Link to="/routes" style={navLinkStyle("/routes")}>Routes</Link>
+          <Link to="/about" style={navLinkStyle("/about")}>About</Link>
+
+          <div style={{
+            width: "1px",
+            height: "16px",
+            background: "var(--border-subtle)",
+            margin: "0 0.5rem",
+            flexShrink: 0
+          }} />
+
+          <span style={{
+            color: "var(--text-muted)",
+            fontSize: "0.75rem",
+            fontWeight: 700,
+            letterSpacing: "0.05em",
+            textTransform: "uppercase",
+            whiteSpace: "nowrap"
+          }}>
+            Karachi
+          </span>
+        </div>
+      </div>
     </nav>
   );
 };
 
+
 export default Navbar;
+
