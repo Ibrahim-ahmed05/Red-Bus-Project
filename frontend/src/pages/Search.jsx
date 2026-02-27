@@ -9,7 +9,8 @@ const Search = () => {
   const [error, setError] = useState("");
 
   useEffect(() => {
-    fetch("http://localhost:8000/stops")
+    const apiUrl = import.meta.env.VITE_API_URL || "http://localhost:8000";
+    fetch(`${apiUrl}/stops`)
       .then((res) => res.json())
       .then((data) => setStops(data))
       .catch(() => setError("Could not load stops. Please check if the server is running."));
@@ -30,7 +31,8 @@ const Search = () => {
     setError("");
 
     try {
-      const res = await fetch(`http://localhost:8000/search/${source},${destination}`);
+      const apiUrl = import.meta.env.VITE_API_URL || "http://localhost:8000";
+      const res = await fetch(`${apiUrl}/search/${source},${destination}`);
       if (!res.ok) {
         const errData = await res.json();
         setError(errData.detail || "No route found for this selection.");

@@ -6,7 +6,8 @@ const Routes = () => {
     const [error, setError] = useState("");
 
     useEffect(() => {
-        fetch("http://localhost:8000/routes-info")
+        const apiUrl = import.meta.env.VITE_API_URL || "http://localhost:8000";
+        fetch(`${apiUrl}/routes-info`)
             .then((res) => res.json())
             .then((data) => {
                 setRoutes(data);
